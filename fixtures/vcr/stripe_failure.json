@@ -1,0 +1,166 @@
+{
+  "Episodes": [
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": "https://api.stripe.com/v1/customers?email=example%40test.com",
+        "Body": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "ContentLength": 3906,
+        "Header": {
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, HEAD, OPTIONS, DELETE"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Expose-Headers": [
+            "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+          ],
+          "Access-Control-Max-Age": [
+            "300"
+          ],
+          "Cache-Control": [
+            "no-cache, no-store"
+          ],
+          "Content-Length": [
+            "3906"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Date": [
+            "Wed, 15 Aug 2018 07:44:04 GMT"
+          ],
+          "Request-Id": [
+            "req_cbdVpm8DhtA18Q"
+          ],
+          "Server": [
+            "nginx"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=31556926; includeSubDomains; preload"
+          ],
+          "Stripe-Version": [
+            "2018-07-27"
+          ]
+        },
+        "Body": "ewogICJvYmplY3QiOiAibGlzdCIsCiAgImRhdGEiOiBbCiAgICB7CiAgICAgICJpZCI6ICJjdXNfRE9jdUp2VkJubm5SWXYiLAogICAgICAib2JqZWN0IjogImN1c3RvbWVyIiwKICAgICAgImFjY291bnRfYmFsYW5jZSI6IDAsCiAgICAgICJjcmVhdGVkIjogMTUzMzk2NTM1NSwKICAgICAgImN1cnJlbmN5IjogImNhZCIsCiAgICAgICJkZWZhdWx0X3NvdXJjZSI6IG51bGwsCiAgICAgICJkZWxpbnF1ZW50IjogZmFsc2UsCiAgICAgICJkZXNjcmlwdGlvbiI6IG51bGwsCiAgICAgICJkaXNjb3VudCI6IG51bGwsCiAgICAgICJlbWFpbCI6ICJiZXZhbkBiZXZhbmh1bnQuY29tIiwKICAgICAgImludm9pY2VfcHJlZml4IjogIjdBNTcxRDciLAogICAgICAibGl2ZW1vZGUiOiBmYWxzZSwKICAgICAgIm1ldGFkYXRhIjogewogICAgICB9LAogICAgICAic2hpcHBpbmciOiBudWxsLAogICAgICAic291cmNlcyI6IHsKICAgICAgICAib2JqZWN0IjogImxpc3QiLAogICAgICAgICJkYXRhIjogWwoKICAgICAgICBdLAogICAgICAgICJoYXNfbW9yZSI6IGZhbHNlLAogICAgICAgICJ0b3RhbF9jb3VudCI6IDAsCiAgICAgICAgInVybCI6ICIvdjEvY3VzdG9tZXJzL2N1c19ET2N1SnZWQm5ublJZdi9zb3VyY2VzIgogICAgICB9LAogICAgICAic3Vic2NyaXB0aW9ucyI6IHsKICAgICAgICAib2JqZWN0IjogImxpc3QiLAogICAgICAgICJkYXRhIjogWwogICAgICAgICAgewogICAgICAgICAgICAiaWQiOiAic3ViX0RPY3hjNUQySjd4VFFrIiwKICAgICAgICAgICAgIm9iamVjdCI6ICJzdWJzY3JpcHRpb24iLAogICAgICAgICAgICAiYXBwbGljYXRpb25fZmVlX3BlcmNlbnQiOiBudWxsLAogICAgICAgICAgICAiYmlsbGluZyI6ICJjaGFyZ2VfYXV0b21hdGljYWxseSIsCiAgICAgICAgICAgICJiaWxsaW5nX2N5Y2xlX2FuY2hvciI6IDE1MzM5NjU1MTEsCiAgICAgICAgICAgICJjYW5jZWxfYXRfcGVyaW9kX2VuZCI6IGZhbHNlLAogICAgICAgICAgICAiY2FuY2VsZWRfYXQiOiBudWxsLAogICAgICAgICAgICAiY3JlYXRlZCI6IDE1MzM5NjU1MTEsCiAgICAgICAgICAgICJjdXJyZW50X3BlcmlvZF9lbmQiOiAxNTM2NjQzOTExLAogICAgICAgICAgICAiY3VycmVudF9wZXJpb2Rfc3RhcnQiOiAxNTMzOTY1NTExLAogICAgICAgICAgICAiY3VzdG9tZXIiOiAiY3VzX0RPY3VKdlZCbm5uUll2IiwKICAgICAgICAgICAgImRheXNfdW50aWxfZHVlIjogbnVsbCwKICAgICAgICAgICAgImRpc2NvdW50IjogbnVsbCwKICAgICAgICAgICAgImVuZGVkX2F0IjogbnVsbCwKICAgICAgICAgICAgIml0ZW1zIjogewogICAgICAgICAgICAgICJvYmplY3QiOiAibGlzdCIsCiAgICAgICAgICAgICAgImRhdGEiOiBbCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICJpZCI6ICJzaV9ET2N4alhuZ2ZJU0NIcSIsCiAgICAgICAgICAgICAgICAgICJvYmplY3QiOiAic3Vic2NyaXB0aW9uX2l0ZW0iLAogICAgICAgICAgICAgICAgICAiY3JlYXRlZCI6IDE1MzM5NjU1MTEsCiAgICAgICAgICAgICAgICAgICJtZXRhZGF0YSI6IHsKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgInBsYW4iOiB7CiAgICAgICAgICAgICAgICAgICAgImlkIjogInBsYW5fRE9LWDV4R1g2OGlITXgiLAogICAgICAgICAgICAgICAgICAgICJvYmplY3QiOiAicGxhbiIsCiAgICAgICAgICAgICAgICAgICAgImFjdGl2ZSI6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgImFnZ3JlZ2F0ZV91c2FnZSI6ICJzdW0iLAogICAgICAgICAgICAgICAgICAgICJhbW91bnQiOiAxLAogICAgICAgICAgICAgICAgICAgICJiaWxsaW5nX3NjaGVtZSI6ICJwZXJfdW5pdCIsCiAgICAgICAgICAgICAgICAgICAgImNyZWF0ZWQiOiAxNTMzODk2OTY1LAogICAgICAgICAgICAgICAgICAgICJjdXJyZW5jeSI6ICJjYWQiLAogICAgICAgICAgICAgICAgICAgICJpbnRlcnZhbCI6ICJtb250aCIsCiAgICAgICAgICAgICAgICAgICAgImludGVydmFsX2NvdW50IjogMSwKICAgICAgICAgICAgICAgICAgICAibGl2ZW1vZGUiOiBmYWxzZSwKICAgICAgICAgICAgICAgICAgICAibWV0YWRhdGEiOiB7CiAgICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgICAibmlja25hbWUiOiAiTWV0ZXJlZCBNb250aGx5IiwKICAgICAgICAgICAgICAgICAgICAicHJvZHVjdCI6ICJwcm9kX0RNdnRZa3JQYmpsNk5pIiwKICAgICAgICAgICAgICAgICAgICAidGllcnMiOiBudWxsLAogICAgICAgICAgICAgICAgICAgICJ0aWVyc19tb2RlIjogbnVsbCwKICAgICAgICAgICAgICAgICAgICAidHJhbnNmb3JtX3VzYWdlIjogbnVsbCwKICAgICAgICAgICAgICAgICAgICAidHJpYWxfcGVyaW9kX2RheXMiOiBudWxsLAogICAgICAgICAgICAgICAgICAgICJ1c2FnZV90eXBlIjogIm1ldGVyZWQiCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICJzdWJzY3JpcHRpb24iOiAic3ViX0RPY3hjNUQySjd4VFFrIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgIF0sCiAgICAgICAgICAgICAgImhhc19tb3JlIjogZmFsc2UsCiAgICAgICAgICAgICAgInRvdGFsX2NvdW50IjogMSwKICAgICAgICAgICAgICAidXJsIjogIi92MS9zdWJzY3JpcHRpb25faXRlbXM/c3Vic2NyaXB0aW9uPXN1Yl9ET2N4YzVEMko3eFRRayIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgImxpdmVtb2RlIjogZmFsc2UsCiAgICAgICAgICAgICJtZXRhZGF0YSI6IHsKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInBsYW4iOiB7CiAgICAgICAgICAgICAgImlkIjogInBsYW5fRE9LWDV4R1g2OGlITXgiLAogICAgICAgICAgICAgICJvYmplY3QiOiAicGxhbiIsCiAgICAgICAgICAgICAgImFjdGl2ZSI6IHRydWUsCiAgICAgICAgICAgICAgImFnZ3JlZ2F0ZV91c2FnZSI6ICJzdW0iLAogICAgICAgICAgICAgICJhbW91bnQiOiAxLAogICAgICAgICAgICAgICJiaWxsaW5nX3NjaGVtZSI6ICJwZXJfdW5pdCIsCiAgICAgICAgICAgICAgImNyZWF0ZWQiOiAxNTMzODk2OTY1LAogICAgICAgICAgICAgICJjdXJyZW5jeSI6ICJjYWQiLAogICAgICAgICAgICAgICJpbnRlcnZhbCI6ICJtb250aCIsCiAgICAgICAgICAgICAgImludGVydmFsX2NvdW50IjogMSwKICAgICAgICAgICAgICAibGl2ZW1vZGUiOiBmYWxzZSwKICAgICAgICAgICAgICAibWV0YWRhdGEiOiB7CiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAibmlja25hbWUiOiAiTWV0ZXJlZCBNb250aGx5IiwKICAgICAgICAgICAgICAicHJvZHVjdCI6ICJwcm9kX0RNdnRZa3JQYmpsNk5pIiwKICAgICAgICAgICAgICAidGllcnMiOiBudWxsLAogICAgICAgICAgICAgICJ0aWVyc19tb2RlIjogbnVsbCwKICAgICAgICAgICAgICAidHJhbnNmb3JtX3VzYWdlIjogbnVsbCwKICAgICAgICAgICAgICAidHJpYWxfcGVyaW9kX2RheXMiOiBudWxsLAogICAgICAgICAgICAgICJ1c2FnZV90eXBlIjogIm1ldGVyZWQiCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJxdWFudGl0eSI6IDEsCiAgICAgICAgICAgICJzdGFydCI6IDE1MzM5NjU1MTEsCiAgICAgICAgICAgICJzdGF0dXMiOiAiYWN0aXZlIiwKICAgICAgICAgICAgInRheF9wZXJjZW50IjogbnVsbCwKICAgICAgICAgICAgInRyaWFsX2VuZCI6IG51bGwsCiAgICAgICAgICAgICJ0cmlhbF9zdGFydCI6IG51bGwKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJoYXNfbW9yZSI6IGZhbHNlLAogICAgICAgICJ0b3RhbF9jb3VudCI6IDEsCiAgICAgICAgInVybCI6ICIvdjEvY3VzdG9tZXJzL2N1c19ET2N1SnZWQm5ublJZdi9zdWJzY3JpcHRpb25zIgogICAgICB9CiAgICB9CiAgXSwKICAiaGFzX21vcmUiOiBmYWxzZSwKICAidXJsIjogIi92MS9jdXN0b21lcnMiCn0K"
+      }
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": "https://api.stripe.com/v1/subscriptions?customer=cus_DOcuJvVBnnnRYv",
+        "Body": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "ContentLength": 2585,
+        "Header": {
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, HEAD, OPTIONS, DELETE"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Expose-Headers": [
+            "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+          ],
+          "Access-Control-Max-Age": [
+            "300"
+          ],
+          "Cache-Control": [
+            "no-cache, no-store"
+          ],
+          "Content-Length": [
+            "2585"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Date": [
+            "Wed, 15 Aug 2018 07:44:04 GMT"
+          ],
+          "Request-Id": [
+            "req_wGNRrkqmHHD3Zu"
+          ],
+          "Server": [
+            "nginx"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=31556926; includeSubDomains; preload"
+          ],
+          "Stripe-Version": [
+            "2018-07-27"
+          ]
+        },
+        "Body": "ewogICJvYmplY3QiOiAibGlzdCIsCiAgImRhdGEiOiBbCiAgICB7CiAgICAgICJpZCI6ICJzdWJfRE9jeGM1RDJKN3hUUWsiLAogICAgICAib2JqZWN0IjogInN1YnNjcmlwdGlvbiIsCiAgICAgICJhcHBsaWNhdGlvbl9mZWVfcGVyY2VudCI6IG51bGwsCiAgICAgICJiaWxsaW5nIjogImNoYXJnZV9hdXRvbWF0aWNhbGx5IiwKICAgICAgImJpbGxpbmdfY3ljbGVfYW5jaG9yIjogMTUzMzk2NTUxMSwKICAgICAgImNhbmNlbF9hdF9wZXJpb2RfZW5kIjogZmFsc2UsCiAgICAgICJjYW5jZWxlZF9hdCI6IG51bGwsCiAgICAgICJjcmVhdGVkIjogMTUzMzk2NTUxMSwKICAgICAgImN1cnJlbnRfcGVyaW9kX2VuZCI6IDE1MzY2NDM5MTEsCiAgICAgICJjdXJyZW50X3BlcmlvZF9zdGFydCI6IDE1MzM5NjU1MTEsCiAgICAgICJjdXN0b21lciI6ICJjdXNfRE9jdUp2VkJubm5SWXYiLAogICAgICAiZGF5c191bnRpbF9kdWUiOiBudWxsLAogICAgICAiZGlzY291bnQiOiBudWxsLAogICAgICAiZW5kZWRfYXQiOiBudWxsLAogICAgICAiaXRlbXMiOiB7CiAgICAgICAgIm9iamVjdCI6ICJsaXN0IiwKICAgICAgICAiZGF0YSI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImlkIjogInNpX0RPY3hqWG5nZklTQ0hxIiwKICAgICAgICAgICAgIm9iamVjdCI6ICJzdWJzY3JpcHRpb25faXRlbSIsCiAgICAgICAgICAgICJjcmVhdGVkIjogMTUzMzk2NTUxMSwKICAgICAgICAgICAgIm1ldGFkYXRhIjogewogICAgICAgICAgICB9LAogICAgICAgICAgICAicGxhbiI6IHsKICAgICAgICAgICAgICAiaWQiOiAicGxhbl9ET0tYNXhHWDY4aUhNeCIsCiAgICAgICAgICAgICAgIm9iamVjdCI6ICJwbGFuIiwKICAgICAgICAgICAgICAiYWN0aXZlIjogdHJ1ZSwKICAgICAgICAgICAgICAiYWdncmVnYXRlX3VzYWdlIjogInN1bSIsCiAgICAgICAgICAgICAgImFtb3VudCI6IDEsCiAgICAgICAgICAgICAgImJpbGxpbmdfc2NoZW1lIjogInBlcl91bml0IiwKICAgICAgICAgICAgICAiY3JlYXRlZCI6IDE1MzM4OTY5NjUsCiAgICAgICAgICAgICAgImN1cnJlbmN5IjogImNhZCIsCiAgICAgICAgICAgICAgImludGVydmFsIjogIm1vbnRoIiwKICAgICAgICAgICAgICAiaW50ZXJ2YWxfY291bnQiOiAxLAogICAgICAgICAgICAgICJsaXZlbW9kZSI6IGZhbHNlLAogICAgICAgICAgICAgICJtZXRhZGF0YSI6IHsKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICJuaWNrbmFtZSI6ICJNZXRlcmVkIE1vbnRobHkiLAogICAgICAgICAgICAgICJwcm9kdWN0IjogInByb2RfRE12dFlrclBiamw2TmkiLAogICAgICAgICAgICAgICJ0aWVycyI6IG51bGwsCiAgICAgICAgICAgICAgInRpZXJzX21vZGUiOiBudWxsLAogICAgICAgICAgICAgICJ0cmFuc2Zvcm1fdXNhZ2UiOiBudWxsLAogICAgICAgICAgICAgICJ0cmlhbF9wZXJpb2RfZGF5cyI6IG51bGwsCiAgICAgICAgICAgICAgInVzYWdlX3R5cGUiOiAibWV0ZXJlZCIKICAgICAgICAgICAgfSwKICAgICAgICAgICAgInN1YnNjcmlwdGlvbiI6ICJzdWJfRE9jeGM1RDJKN3hUUWsiCiAgICAgICAgICB9CiAgICAgICAgXSwKICAgICAgICAiaGFzX21vcmUiOiBmYWxzZSwKICAgICAgICAidG90YWxfY291bnQiOiAxLAogICAgICAgICJ1cmwiOiAiL3YxL3N1YnNjcmlwdGlvbl9pdGVtcz9zdWJzY3JpcHRpb249c3ViX0RPY3hjNUQySjd4VFFrIgogICAgICB9LAogICAgICAibGl2ZW1vZGUiOiBmYWxzZSwKICAgICAgIm1ldGFkYXRhIjogewogICAgICB9LAogICAgICAicGxhbiI6IHsKICAgICAgICAiaWQiOiAicGxhbl9ET0tYNXhHWDY4aUhNeCIsCiAgICAgICAgIm9iamVjdCI6ICJwbGFuIiwKICAgICAgICAiYWN0aXZlIjogdHJ1ZSwKICAgICAgICAiYWdncmVnYXRlX3VzYWdlIjogInN1bSIsCiAgICAgICAgImFtb3VudCI6IDEsCiAgICAgICAgImJpbGxpbmdfc2NoZW1lIjogInBlcl91bml0IiwKICAgICAgICAiY3JlYXRlZCI6IDE1MzM4OTY5NjUsCiAgICAgICAgImN1cnJlbmN5IjogImNhZCIsCiAgICAgICAgImludGVydmFsIjogIm1vbnRoIiwKICAgICAgICAiaW50ZXJ2YWxfY291bnQiOiAxLAogICAgICAgICJsaXZlbW9kZSI6IGZhbHNlLAogICAgICAgICJtZXRhZGF0YSI6IHsKICAgICAgICB9LAogICAgICAgICJuaWNrbmFtZSI6ICJNZXRlcmVkIE1vbnRobHkiLAogICAgICAgICJwcm9kdWN0IjogInByb2RfRE12dFlrclBiamw2TmkiLAogICAgICAgICJ0aWVycyI6IG51bGwsCiAgICAgICAgInRpZXJzX21vZGUiOiBudWxsLAogICAgICAgICJ0cmFuc2Zvcm1fdXNhZ2UiOiBudWxsLAogICAgICAgICJ0cmlhbF9wZXJpb2RfZGF5cyI6IG51bGwsCiAgICAgICAgInVzYWdlX3R5cGUiOiAibWV0ZXJlZCIKICAgICAgfSwKICAgICAgInF1YW50aXR5IjogMSwKICAgICAgInN0YXJ0IjogMTUzMzk2NTUxMSwKICAgICAgInN0YXR1cyI6ICJhY3RpdmUiLAogICAgICAidGF4X3BlcmNlbnQiOiBudWxsLAogICAgICAidHJpYWxfZW5kIjogbnVsbCwKICAgICAgInRyaWFsX3N0YXJ0IjogbnVsbAogICAgfQogIF0sCiAgImhhc19tb3JlIjogZmFsc2UsCiAgInVybCI6ICIvdjEvc3Vic2NyaXB0aW9ucyIKfQo="
+      }
+    },
+    {
+      "Request": {
+        "Method": "GET",
+        "URL": "https://api.stripe.com/v1/products/prod_DMvtYkrPbjl6Ni",
+        "Body": ""
+      },
+      "Response": {
+        "Status": "200 OK",
+        "StatusCode": 200,
+        "ContentLength": 442,
+        "Header": {
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, HEAD, OPTIONS, DELETE"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Expose-Headers": [
+            "Request-Id, Stripe-Manage-Version, X-Stripe-External-Auth-Required, X-Stripe-Privileged-Session-Required"
+          ],
+          "Access-Control-Max-Age": [
+            "300"
+          ],
+          "Cache-Control": [
+            "no-cache, no-store"
+          ],
+          "Content-Length": [
+            "442"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "Date": [
+            "Wed, 15 Aug 2018 07:44:04 GMT"
+          ],
+          "Request-Id": [
+            "req_09UFXdWAoXGE38"
+          ],
+          "Server": [
+            "nginx"
+          ],
+          "Strict-Transport-Security": [
+            "max-age=31556926; includeSubDomains; preload"
+          ],
+          "Stripe-Version": [
+            "2018-07-27"
+          ]
+        },
+        "Body": "ewogICJpZCI6ICJwcm9kX0RNdnRZa3JQYmpsNk5pIiwKICAib2JqZWN0IjogInByb2R1Y3QiLAogICJhY3RpdmUiOiB0cnVlLAogICJhdHRyaWJ1dGVzIjogWwoKICBdLAogICJjYXB0aW9uIjogbnVsbCwKICAiY3JlYXRlZCI6IDE1MzM1NzQ2NjEsCiAgImRlYWN0aXZhdGVfb24iOiBbCgogIF0sCiAgImRlc2NyaXB0aW9uIjogbnVsbCwKICAiaW1hZ2VzIjogWwoKICBdLAogICJsaXZlbW9kZSI6IGZhbHNlLAogICJtZXRhZGF0YSI6IHsKICB9LAogICJuYW1lIjogImdldDpnZXQiLAogICJwYWNrYWdlX2RpbWVuc2lvbnMiOiBudWxsLAogICJzaGlwcGFibGUiOiBudWxsLAogICJzdGF0ZW1lbnRfZGVzY3JpcHRvciI6IG51bGwsCiAgInR5cGUiOiAic2VydmljZSIsCiAgInVuaXRfbGFiZWwiOiBudWxsLAogICJ1cGRhdGVkIjogMTUzNDAzNDExOSwKICAidXJsIjogbnVsbAp9Cg=="
+      }
+    }
+  ]
+}
