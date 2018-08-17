@@ -3,6 +3,7 @@ package apibillme
 import (
 	"errors"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -144,7 +145,7 @@ func searchStripeJSON(path string, serverMethod string, serverBaseURL string) bo
 	// open stripe.json
 	JSONBytes, err := ioutil.ReadFile(path)
 	if err != nil {
-		return false
+		log.Panic(err)
 	}
 
 	// check if any of the baseURL(s) match with the method called
