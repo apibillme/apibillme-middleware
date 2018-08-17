@@ -1,0 +1,16 @@
+{
+    "scopes": [
+        {
+            "method": "get",
+            "baseURL": "users"
+        },
+        {
+            "method": "get",
+            "baseURL": "get"
+        },
+        {
+            "method": "post",
+            "baseURL": "users"
+        }
+    ]
+}

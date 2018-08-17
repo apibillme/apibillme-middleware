@@ -2,10 +2,16 @@ package apibillme
 
 import (
 	"errors"
+	"io/ioutil"
+	"log"
 	"net/http"
+	"os"
+	"path/filepath"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/tidwall/gjson"
 
 	"github.com/auth0-community/go-auth0"
 	"github.com/spf13/cast"
@@ -127,7 +133,35 @@ func validateStripeScope(productName string, serverMethod string, serverBaseURL 
 	return false
 }
 
-func validateStripe(serverMethod string, serverBaseURL string, claims claims, auth0Audience string, stripeReject bool, stripeKey string, timestamp int64) error {
+func getExecutablePath() string {
+	ex, err := os.Executable()
+	if err != nil {
+		panic(err)
+	}
+	return filepath.Dir(ex)
+}
+
+func searchStripeJSON(path string, serverMethod string, serverBaseURL string) bool {
+	// open stripe.json
+	JSONBytes, err := ioutil.ReadFile(path)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// check if any of the baseURL(s) match with the method called
+	matched := false
+	JSON := gjson.ParseBytes(JSONBytes)
+	baseURLs := JSON.Get(`scopes.#[method=="` + serverMethod + `"]#.baseURL`)
+
+	for _, baseURL := range baseURLs.Array() {
+		if baseURL.String() == serverBaseURL {
+			matched = true
+		}
+	}
+	return matched
+}
+
+func validateStripe(serverMethod string, serverBaseURL string, claims claims, auth0Audience string, stripeKey string, timestamp int64) error {
 
 	// Stripe API connection
 	sx := sc.New(stripeKey, nil)
@@ -167,7 +201,7 @@ func validateStripe(serverMethod string, serverBaseURL string, claims claims, au
 			}
 		}
 	}
-	if !validated && stripeReject {
+	if !validated {
 		return errors.New("")
 	}
 	return nil
@@ -208,11 +242,14 @@ func Run() gin.HandlerFunc {
 		useStripe := cast.ToBool(viper.Get("stripe_validate"))
 		if useStripe {
 			stripeKey := cast.ToString(viper.Get("stripe_key"))
-			stripeReject := cast.ToBool(viper.Get("stripe_reject"))
-			err := validateStripe(serverMethod, serverBaseURL, claims, auth0Audience, stripeReject, stripeKey, 0)
-			if err != nil {
-				c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"Message": "Unauthorized - No Active Subscription to this URL"})
-				return
+			stripeJSONPath := getExecutablePath() + cast.ToString(viper.Get("stripe_json_path"))
+			runStripe := searchStripeJSON(stripeJSONPath, serverMethod, serverBaseURL)
+			if runStripe {
+				err := validateStripe(serverMethod, serverBaseURL, claims, auth0Audience, stripeKey, 0)
+				if err != nil {
+					c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"Message": "Unauthorized - No Active Subscription to this URL"})
+					return
+				}
 			}
 		}
 

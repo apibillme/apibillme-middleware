@@ -31,6 +31,15 @@ func TestSpec(t *testing.T) {
 		})
 	})
 
+	Convey("searchStripeJSON", t, func() {
+		Convey("should be true if found", func() {
+			So(searchStripeJSON("testdata/stripe.json", "get", "get"), ShouldBeTrue)
+		})
+		Convey("should be false if not found", func() {
+			So(searchStripeJSON("testdata/stripe.json", "put", "users"), ShouldBeFalse)
+		})
+	})
+
 	Convey("validateRBAC", t, func() {
 		serverBaseURL := "users"
 		serverMethod := "get"
@@ -132,7 +141,7 @@ func TestSpec(t *testing.T) {
 
 			claims := claims{}
 			json.Unmarshal(jsonRaw, &claims)
-			err := validateStripe("get", "get", claims, "https://httpbin.org/", true, "", 1534319043)
+			err := validateStripe("get", "get", claims, "https://httpbin.org/", "", 1534319043)
 			So(err, ShouldBeNil) // should not have an error
 		})
 		Convey("should error with stripe_reject set", func() {
@@ -142,7 +151,7 @@ func TestSpec(t *testing.T) {
 
 			claims := claims{}
 			json.Unmarshal(jsonRaw, &claims)
-			err := validateStripe("get", "users", claims, "https://httpbin.org/", true, "", 0)
+			err := validateStripe("get", "users", claims, "https://httpbin.org/", "", 0)
 			So(err, ShouldBeError) // should be an error
 		})
 	})
