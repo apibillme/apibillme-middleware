@@ -5,8 +5,6 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
-	"path/filepath"
 	"regexp"
 	"strings"
 	"time"
@@ -133,14 +131,6 @@ func validateStripeScope(productName string, serverMethod string, serverBaseURL 
 	return false
 }
 
-func getExecutablePath() string {
-	ex, err := os.Executable()
-	if err != nil {
-		panic(err)
-	}
-	return filepath.Dir(ex)
-}
-
 func searchStripeJSON(path string, serverMethod string, serverBaseURL string) bool {
 	// open stripe.json
 	JSONBytes, err := ioutil.ReadFile(path)
@@ -242,7 +232,7 @@ func Run() gin.HandlerFunc {
 		useStripe := cast.ToBool(viper.Get("stripe_validate"))
 		if useStripe {
 			stripeKey := cast.ToString(viper.Get("stripe_key"))
-			stripeJSONPath := getExecutablePath() + cast.ToString(viper.Get("stripe_json_path"))
+			stripeJSONPath := cast.ToString(viper.Get("stripe_json_path"))
 			runStripe := searchStripeJSON(stripeJSONPath, serverMethod, serverBaseURL)
 			if runStripe {
 				err := validateStripe(serverMethod, serverBaseURL, claims, auth0Audience, stripeKey, 0)
