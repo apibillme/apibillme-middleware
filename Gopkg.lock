@@ -10,6 +10,30 @@
   version = "1.0.0"
 
 [[projects]]
+  digest = "1:90449c82ad7fe7ec5cc25699f8b21c9980cdfd59270cc49808c162f6dd0756a2"
+  name = "github.com/apibillme/restly"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "b5edf63d8dee2216811c68f9b4c8c5967ce96bc0"
+  version = "1.0.0"
+
+[[projects]]
+  digest = "1:bd336ef5505b5ec83e64d621bb10b594883ffc4c05002d37bffcfe683e78d682"
+  name = "github.com/apibillme/stubby"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "5f859cd6c3aff4dbc36ea3f0d0094af70e079620"
+  version = "1.0.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:67c8fd38cd67297657a32ef729a12795bb4c263cfa3e15fa5c2de255e9339670"
+  name = "github.com/beevik/etree"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "90dafc1e1f114dfb9576218bb43c03fb854d1b34"
+
+[[projects]]
   digest = "1:ffe9824d294da03b391f44e1ae8281281b4afc1bdaa9588c9097785e3af10cec"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
@@ -371,6 +395,8 @@
   analyzer-version = 1
   input-imports = [
     "github.com/apibillme/auth0",
+    "github.com/apibillme/restly",
+    "github.com/apibillme/stubby",
     "github.com/gin-gonic/gin",
     "github.com/lestrrat-go/jwx/jwt",
     "github.com/smartystreets/goconvey/convey",
